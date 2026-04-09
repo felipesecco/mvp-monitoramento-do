@@ -68,8 +68,8 @@ st.markdown('<div class="section-title">📊 Indicadores gerais</div>', unsafe_a
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total de eventos", len(df))
 col2.metric("Tipos de evento", df["tipo"].nunique())
-col3.metric("Órgãos monitorados", df["orgao"].nunique())
-col4.metric("Período coberto", df["data_publicacao"].nunique())
+col3.metric("Órgãos no dataset de demonstração", df["orgao"].nunique())
+col4.metric("Datas monitoradas", df["data_publicacao"].nunique())
 
 # =========================
 # Filtros
@@ -187,3 +187,4 @@ st.info(
     "Diários Oficiais. Em uma evolução futura, a solução poderá incorporar automação de ingestão, "
     "ampliação das fontes monitoradas, enriquecimento semântico e mecanismos de busca mais avançados."
 )
+st.caption("Dados fictícios utilizados exclusivamente para demonstração do MVP.")
